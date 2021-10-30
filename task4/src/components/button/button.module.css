@@ -1,0 +1,12 @@
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+
+@media (max-width: 635px) {
+  .buttons{
+    justify-content: space-around;
+  }
+}

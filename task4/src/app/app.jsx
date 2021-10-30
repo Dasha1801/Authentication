@@ -1,15 +1,15 @@
-
-import ButtonBro from '../components/button/buttonBro';
-import ButtonSis from '../components/button/buttonSis';
+import Container from "react-bootstrap/Container";
+import Buttons from "../components/button/buttons";
+import Information from "../components/information/information";
 import styles from './app.module.css';
 
-const  App = () =>  {
+const App = () => {
   return (
-    <div className={styles.app}>
-      <ButtonSis/>
-      <ButtonBro/>
-    </div>
+    <Container className={styles.app}>
+      <Information />
+      <Buttons />
+    </Container>
   );
-}
+};
 
 export default App;
