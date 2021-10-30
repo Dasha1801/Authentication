@@ -10,7 +10,8 @@
 .count {
   font-size: 0.8em;
   font-weight: 700;
-  color: rgba(23, 128, 214, 0.904);
+  color: #0dcaf0;
+  font-style: italic;
 }
 
 @media (max-width: 946px) {
