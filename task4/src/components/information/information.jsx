@@ -7,10 +7,10 @@ const Information = () => {
   return (
     <Container className={styles.statistic}>
       <h3 className={styles.title}>
-        Sis! <span className={styles.count}>{`${bro} `}</span>
+        <span className={styles.count}>{`${bro} `}</span>Sis!
       </h3>
       <h3 className={styles.title}>
-        Bro! <span className={styles.count}>{`${sis}`}</span>
+        <span className={styles.count}>{`${sis} `}</span> Bro!
       </h3>
     </Container>
   );

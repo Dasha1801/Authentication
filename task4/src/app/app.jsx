@@ -1,16 +1,25 @@
 import Container from "react-bootstrap/Container";
-// import Buttons from "../components/button/buttons";
+import Buttons from "../components/button/buttons";
 import Information from "../components/information/information";
-import Networks from '../components/networks/networks';
-import styles from './app.module.css';
+import Networks from "../components/networks/networks";
+import styles from "./app.module.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 const App = () => {
   return (
-    <Container className={styles.app}>
-      <Information />
-      <Networks/>
-      {/* <Buttons /> */}
-    </Container>
+    <Router>
+      <Container className={styles.app}>
+        <Switch>
+          <Route exact path="/">
+            <Information />
+            <Networks />
+          </Route>
+          <Route exact path="/message">
+            <Buttons />
+          </Route>
+        </Switch>
+      </Container>
+    </Router>
   );
 };
 

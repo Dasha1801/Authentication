@@ -1,4 +1,45 @@
 .app {
   padding-top: 5%;
+  background-image: url(../shared/assets/icon-computer.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 3%;
+  background-size: 80% 100%;
+  min-height: 550px;
 }
 
+@media (max-width: 1230px) {
+  .app {
+    min-height: 450px;
+  }
+}
+
+@media (max-width: 990px) {
+  .app {
+    min-height: 380px;
+    background-size: 100% 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .app {
+    min-height: 325px;
+    background-size: 95% 100%;
+    padding-top: 6%;
+  }
+}
+
+@media (max-width: 490px) {
+  .app {
+    min-height: 290px;
+    background-size: 98% 100%;
+    padding-top: 8%;
+  }
+}
+
+@media (max-width: 400px) {
+  .app {
+    min-height: 275px;
+    background-size: 98% 95%;
+  }
+}
