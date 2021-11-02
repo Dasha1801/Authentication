@@ -1,7 +1,7 @@
 import Information from "../components/information/information";
 import Networks from "../components/networks/networks";
 
-const Auth = () => {
+const SignIn = () => {
   return (
     <>
       <Information />
@@ -10,4 +10,4 @@ const Auth = () => {
   );
 };
 
-export default Auth;
+export default SignIn;

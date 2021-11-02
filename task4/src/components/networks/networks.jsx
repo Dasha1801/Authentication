@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import styles from "./networks.module.css";
 import iconGoogle from "./../../shared/assets/google.png";
 import iconFB from "./../../shared/assets/facebook.png";
+import iconGH from "./../../shared/assets/github.png";
 import Button from "react-bootstrap/Button";
 import {
   facebookProvider,
@@ -9,18 +10,28 @@ import {
   googleProvider,
 } from "../../config/authMethods";
 import socialAuth from "../../service/auth";
+import { useDispatch } from "react-redux";
+import { logIn } from "../../redux/action";
+// import firebase from "../../config/firebaseConfig";
+
 
 const Networks = () => {
+ 
+  const dispatch = useDispatch();
+
   const handleBtn = async (provider) => {
     const res = await socialAuth(provider);
-   
-    console.log(res);
+    if (res) {
+      dispatch(logIn(true));
+    }
   };
+
   return (
     <Container className={styles.networks}>
+    
       <Button
         variant="outline-info"
-        className={styles.btnFB}
+        className={styles.btn}
         onClick={() => handleBtn(facebookProvider)}
       >
         <img className={styles.icon} src={iconFB} alt="icon FB" />
@@ -29,7 +40,7 @@ const Networks = () => {
 
       <Button
         variant="outline-info"
-        className={styles.btnGoogle}
+        className={styles.btn}
         onClick={() => handleBtn(googleProvider)}
       >
         <img className={styles.icon} src={iconGoogle} alt="icon google" />
@@ -38,9 +49,10 @@ const Networks = () => {
 
       <Button
         variant="outline-info"
-        className={styles.btnGoogle}
+        className={styles.btn}
         onClick={() => handleBtn(githubProvider)}
       >
+          <img className={styles.icon} src={iconGH} alt="icon github" />
         GitHub
       </Button>
     </Container>

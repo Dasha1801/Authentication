@@ -1,8 +1,9 @@
 import firebase from "firebase/compat/app";
-import "firebase/firebase-analytics-compat";
 import "firebase/compat/auth";
+import "firebase/firebase-database-compat";
+import 'firebase/firebase-firestore-compat';
 
-const firebaseConfig = {
+firebase.initializeApp({
   apiKey: "AIzaSyA9ig5DqP3f9hsFd61Dn9QMMrJh9WL9J5o",
   authDomain: "task4-itransition-fbfac.firebaseapp.com",
   projectId: "task4-itransition-fbfac",
@@ -10,8 +11,9 @@ const firebaseConfig = {
   messagingSenderId: "855219116237",
   appId: "1:855219116237:web:5fdbb9f32d4a701c57b184",
   measurementId: "G-RZ5CG2VPBE",
-};
+});
 
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+export const auth = firebase.auth();
+export const firestore = firebase.firestore();
+
 export default firebase;

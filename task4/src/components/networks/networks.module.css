@@ -10,14 +10,12 @@
   height: 32px;
 }
 
-.btnGoogle,
-.btnFB {
+.btn {
   width: 20%;
   margin-bottom: 1%;
 }
 @media (max-width: 990px) {
-  .btnGoogle,
-  .btnFB {
+  .btn {
     width: 30%;
   }
   .icon {
@@ -27,15 +25,15 @@
 }
 
 @media (max-width: 775px) {
-  .btnGoogle,
-  .btnFB {
+  .btn {
     width: 35%;
+    line-height: 0.4;
+    padding: 3px;
   }
 }
 
 @media (max-width: 490px) {
-  .btnGoogle,
-  .btnFB {
+  .btn {
     width: 40%;
   }
 
@@ -46,8 +44,7 @@
 }
 
 @media (max-width: 350px) {
-  .btnGoogle,
-  .btnFB {
+  .btn {
     width: 45%;
   }
 

@@ -14,5 +14,3 @@ const socialAuth = async (provider) => {
 
 
 export default socialAuth;
-
-

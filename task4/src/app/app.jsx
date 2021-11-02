@@ -3,6 +3,8 @@ import styles from "./app.module.css";
 import { BrowserRouter } from "react-router-dom";
 import AppRouter from "../appRouter/appRouter";
 
+
+
 const App = () => {
   return (
     <BrowserRouter>
