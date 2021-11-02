@@ -1,11 +1,11 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
-import ButtonBro from "./buttonBro";
-import ButtonSis from "./buttonSis";
-import styles from "./button.module.css";
+import ButtonBro from "./buttons/buttonBro";
+import ButtonSis from "./buttons/buttonSis";
+import styles from "./buttons.module.css";
 
 
-const Buttons = () => {
+const SubmitBtn = () => {
   return (
     <Container className={styles.buttons}>
       <ButtonSis />
@@ -14,4 +14,4 @@ const Buttons = () => {
   );
 };
 
-export default Buttons;
+export default SubmitBtn;

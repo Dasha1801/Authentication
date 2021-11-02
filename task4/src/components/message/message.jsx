@@ -1,4 +1,3 @@
-// import { useEffect, useState } from "react";
 import firebase from "../../config/firebaseConfig";
 import { useEffect, useState } from "react";
 import styles from "./message.module.css";
@@ -9,7 +8,7 @@ const Message = (info) => {
   const [time, setTime] = useState("");
   const messagesRef = firebase.database().ref("messages");
 
-  useEffect(() => {
+  const getLastMessage = function () {
     messagesRef.on("value", (snapshot) => {
       const messagesList = Object.values(snapshot.val());
       const lastMessage = messagesList[messagesList.length - 1];
@@ -17,12 +16,17 @@ const Message = (info) => {
       setUser(lastMessage.name);
       setTime(lastMessage.time);
     });
-  }, [messagesRef]);
+  };
+
+  useEffect(() => {
+    getLastMessage();
+  });
 
   return (
-    <span
-      className={styles.text}
-    >{`${text} \n Sent by ${user} at ${time}`}</span>
+    <div className={styles.text}>
+      <span className={styles.message}>{`${text}`}</span>
+      {`Sent by ${user} at ${time}`}
+    </div>
   );
 };
 

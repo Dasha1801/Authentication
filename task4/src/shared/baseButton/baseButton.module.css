@@ -1,18 +1,22 @@
-.baseButton{
+.baseButton {
   width: 45%;
   font-weight: 600;
   font-size: 1.5em;
 }
 
-
-@media (max-width: 946px){
-  .baseButton{
+@media (max-width: 946px) {
+  .baseButton {
     font-size: 1.3em;
   }
 }
 
-@media (max-width: 635px){
-  .baseButton{
-    width: 60%;
+@media (max-width: 770px) {
+  .baseButton {
+    width: 80%;
+  }
+}
+@media (max-width: 405px) {
+  .baseButton {
+    width: 100%;
   }
 }

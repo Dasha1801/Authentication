@@ -1,11 +1,11 @@
 import Information from "../components/information/information";
-import Networks from "../components/networks/networks";
+import NetworkBtn from '../components/networkBtn/networkBtn';
 
 const SignIn = () => {
   return (
     <>
       <Information />
-      <Networks />
+      <NetworkBtn />
     </>
   );
 };

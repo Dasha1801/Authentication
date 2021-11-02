@@ -6,23 +6,31 @@ import firebase from "../../config/firebaseConfig";
 const Information = () => {
   const [countSis, setCountSis] = useState(0);
   const [countBro, setCountBro] = useState(0);
-  
+
   const sisRef = firebase.database().ref("countSis");
   const broRef = firebase.database().ref("countBro");
-  
-  useEffect(() => {
+
+  const getCountSis = function () {
     sisRef.on("value", (snapshot) => {
       const { sis } = snapshot.val();
       setCountSis(sis);
     });
-  },[sisRef]);
+  };
 
-  useEffect(() => {
+  const getCountBro = function () {
     broRef.on("value", (snapshot) => {
       const { bro } = snapshot.val();
       setCountBro(bro);
     });
-  },[broRef]);
+  };
+
+  useEffect(() => {
+    getCountSis();
+  });
+
+  useEffect(() => {
+    getCountBro();
+  });
 
   return (
     <Container className={styles.statistic}>
