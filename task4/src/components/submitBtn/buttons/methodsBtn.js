@@ -1,8 +1,6 @@
-import firebase from '../../../config/firebaseConfig';
+import firebase from "../../../config/firebaseConfig";
 
 const date = new Date();
-
-
 
 export const sendMessage = function (user, text) {
   const messagesRef = firebase.database().ref("messages");

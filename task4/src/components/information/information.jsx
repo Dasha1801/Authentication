@@ -6,7 +6,6 @@ import firebase from "../../config/firebaseConfig";
 const Information = () => {
   const [countSis, setCountSis] = useState(0);
   const [countBro, setCountBro] = useState(0);
-
   const sisRef = firebase.database().ref("countSis");
   const broRef = firebase.database().ref("countBro");
 

@@ -4,7 +4,6 @@ import ButtonBro from "./buttons/buttonBro";
 import ButtonSis from "./buttons/buttonSis";
 import styles from "./buttons.module.css";
 
-
 const SubmitBtn = () => {
   return (
     <Container className={styles.buttons}>
